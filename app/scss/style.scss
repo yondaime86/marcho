@@ -4,6 +4,67 @@
 @import 'global';
 
 
+.header {
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  &-menu {
+    &__list {
+      display: flex;
+    }
+
+    &__item+&__item {
+      padding-left: 35px;
+    }
+
+    &__link {
+      color: $title;
+      transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+      @extend %roboto-400;
+      &:hover {
+        color: $accent;
+        border-bottom: 1px solid $accent;
+        @extend %roboto-700;
+      }
+      
+      &--active {
+        color: $accent;
+        border-bottom: 1px solid $accent;
+        @extend %roboto-700;
+      }
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__link+&__link {
+    padding-left: 25px;
+  }
+
+  &__number {
+    position: absolute;
+    top: -9px;
+    right: -13px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+  }
+}
 
 
 @import 'media';

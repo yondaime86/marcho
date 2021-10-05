@@ -29,6 +29,7 @@
       &:hover {
         color: $accent;
         border-bottom: 1px solid $accent;
+        @extend %roboto-700;
       }
       
       &--active {
